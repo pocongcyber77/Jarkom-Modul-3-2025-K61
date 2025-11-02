@@ -155,4 +155,63 @@ ip route add default via 10.15.43.1
 ```
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 ```
+## Soal nomer 3
+### Durin
+```
+ip addr flush dev eth5
+ip addr add 10.15.43.129/26 dev eth5
+ip link set eth5 up
+```
+
+
+### Minastir
+```
+ip addr flush dev eth0
+ip addr add 10.15.43.130/26 dev eth0
+ip link set eth0 up
+```
+
+TEST PING DULU 
+`ping -c 3 10.15.43.130`  &  `ping -c 3 10.15.43.129`
+
+artinya semua trafik dari node-node tersebut tidak boleh langsung ke Internet,
+tetapi harus melewati Minastir terlebih dahulu, karena Minastir berperan sebagai firewall / gateway utama.
+
+#### Alur
+```
+[Node Lain] 
+     ↓
+   (Durin)
+     ↓
+  (Minastir)
+     ↓
+ [Internet / NAT1]
+```
+
+#### Durin (benerin )
+```
+ping -c 3 10.15.43.130   # pastikan bisa ke Minastir
+ping -c 3 8.8.8.8        # cek masih bisa keluar Internet
+```
+
+Minastir berperan sebagai firewall dan gateway ke Internet, jadi:
+
+Routing & NAT di Minastir
+
+Pastikan Minastir punya dua network aktif:
+
+eth0 → 10.15.43.130/26 (ke Durin)
+
+eth1 → 10.94.5.1/24 (ke Internet)
+
+```
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+
+```
+
+
+
+
 
