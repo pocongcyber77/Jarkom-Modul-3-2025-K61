@@ -4,10 +4,13 @@
 ## Dikerjakan Oleh Ahmad Ibnu Athiallah - 5027241024
 
 # Soal 1
+Membuat topologi dan subnetting sesuai konfigurasi yang dibutuhkan di soal
 
-1) Skrip utilitas global (jalankan di setiap host non-router sekali)
+# Soal 2
+Subnetting dan set IP dinamis di beberapa node
 
-Salin & jalankan ini di setiap host non-router (Aldarion, Erendis, Amdir, Palantir, Narvi, Elros, Pharazon, Elendil, Isildur, Anarion, Galadriel, Celeborn, Oropher, Miriel, Amandil, Gilgalad, Celebrimbor, Khamul):
+<img width="809" height="405" alt="Screenshot 2025-11-07 045737" src="https://github.com/user-attachments/assets/50115b00-47cf-4b00-93ce-3197239e9829" />
+
 
 # Soal 12
 Kerjakan di masing-masing node (galadriel, celeborn, oropher)
@@ -77,8 +80,9 @@ service nginx start
    `10.94.2.6   galadriel.k61.com #Tambahkan ini di line paling bawah`
 2. `curl http://galadriel.k61.com:8004`
 
-### Screenshor no. 12 dan 13
-ss
+### Screenshot no. 12 dan 13
+<img width="906" height="68" alt="Screenshot 2025-11-07 050421" src="https://github.com/user-attachments/assets/e24907c0-df58-476b-9bbb-39364fa09dc6" />
+
 
 # Soal 14
 Kerjakan di masing-masing node (galadriel, celeborn, oropher)
@@ -121,7 +125,12 @@ server {
 ### Tes dari Node Client
 curl http://galadriel.k61.com:8004
 
+<img width="773" height="211" alt="Screenshot 2025-11-07 050555" src="https://github.com/user-attachments/assets/149be54f-cb65-4ba4-82fa-3756ba50daaf" />
+
 curl -u noldor:silvan http://galadriel.k61.com:8004
+
+<img width="1381" height="90" alt="Screenshot 2025-11-07 050612" src="https://github.com/user-attachments/assets/9f105e63-7053-4f9d-8ab2-72cc5092774f" />
+
 
 # Soal 15
 Melanjutkan di Galadriel
@@ -139,6 +148,8 @@ echo "<p>Your IP (as seen by PHP): " . htmlspecialchars($ip) . "</p>";
 `service nginx restart`
 
 ### Screenshot
+
+<img width="1229" height="82" alt="Screenshot 2025-11-07 050828" src="https://github.com/user-attachments/assets/ec70b73a-3aeb-4db3-8c12-1f86d7b819a3" />
 
 # Soal 16
 (PHARAZON)
@@ -201,4 +212,5 @@ service nginx restart
 ```
 
 ### TES
+<img width="1229" height="82" alt="Screenshot 2025-11-07 050828" src="https://github.com/user-attachments/assets/5b8ef665-3ede-4b6a-96de-e501b75ee807" />
 
