@@ -15,4 +15,5 @@ Kerjakan di masing-masing node (galadriel, celeborn, oropher)
 1. `apt install -y nginx php8.4-fpm php8.4-cli`
 2. ```mkdir -p /var/www/html
 chown -R www-data:www-data /var/www/html
-chmod -R 755 /var/www/html```
+chmod -R 755 /var/www/html
+```
